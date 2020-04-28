@@ -3,7 +3,7 @@
     /* padding: 0; */
 }
 div{
-    border: 1px solid black;
+    border: px solid black;
 }
 .background{
     background-image: url("../img/");
@@ -35,6 +35,8 @@ div{
 .content{
     width: 70%;
     margin-left: 15%;
+    margin-top: 50px;
+    padding-left: 50px;
 }
 .content table{
     width: 100%;
@@ -46,12 +48,23 @@ div{
     text-align: center;
 }
 .information{
-    width: 60%;
+    width: 70%;
+    position: absolute;
+    z-index: 999;
+}
+.information div{
+    width: 30%;
+    display: inline-block;
+}
+.information div h4{
+    margin: 10px;
 }
 .article{
     width: 40%;
+    display: inline-block;
 }
 .article div{
+    border-bottom: 1px dotted gray;
     height: 150px;
     overflow: hidden;
     text-overflow: ellipsis;

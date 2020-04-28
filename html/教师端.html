@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>电子商务</title>
     <link rel="stylesheet" type="text/css" href="../css/教师端.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
          <div class="title" >
              <table>
                  <tr>
-                     <td></td>
+                     <td style="width: 32%;border-left: 0;"><img src="../img/4.png" width="100%"></td>
                      <td @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</td>
                      <td><a @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</a></td>
                      <td><a @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</a></td>
@@ -21,23 +21,23 @@
          </div>
          <div class="content" v-show="num==1">
              <div class="information">
-                 <img>
+                 <div style="border: 5px double skyblue;border-radius: 50%;overflow: hidden;"><img src="../img/1.jpg" width="100%"></div>
                  <div>
-                     <h2>基本信息</h2>
-                     <h4>姓名：王红艳</h4>
+                     <h4>姓名：Jinx</h4>
                      <h4>性别：女</h4>
-                     <h4>年龄：18</h4>
-                     <h4>入职时间：</h4>
+                     <h4>年龄：17</h4>
+                     <h4>入职时间:2020年1月1日</h4>
                      <h4>研究方向:</h4>
                  </div>
              </div>
              <div class="article">
                  <div v-for="(item,index) in article" v-if="index<=1">
                      <h2 v-text="item.name"></h2>
-                     <p v-text="item.content"></p>
+                     <p style="text-indent: 25px;margin-top: 10px;" v-text="item.content"></p>
                  </div>
-                  <a style="margin-left:80%;" class="unchecked">更多</a>
+                  <a style="margin-left:80%;font-size: large;" class="unchecked">更  多</a>
              </div>
+             <div style="display: inline-block;width: 50%;position: relative;vertical-align: bottom;"><img src="../img/5.jpg" width="100%"></div>
          </div>
          <div class="content" v-show="num==2">
              <div v-for="(item,index) in meeting" v-if="index<=3">
@@ -67,7 +67,7 @@
                  </tr>
              </table>
          </div>
-         </div>
+         <div style="height: 200px;"></div>
      </div>
 </body>
 </html>
