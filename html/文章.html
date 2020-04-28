@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>文章</title>
+    <link rel="stylesheet" href="../css/文章.css">
 </head>
 <body>
     <div id="article">
-        
+        <div style="height: 10px;"></div>
+        <div v-for="(item,index) in article" class="article">
+            <h3 v-text="item.name"></h3>
+            <p v-text="item.content"></p>
+        </div>
+        <div style="height: 20px;"></div>
     </div>
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script 
+<script src="../js/文章.js"></script>

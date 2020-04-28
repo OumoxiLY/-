@@ -1,7 +1,7 @@
 var title = new Vue({
     el:"#background",
     data:{
-        num:"1",
+        num:"4",
         avatarSrc:"img\1.jpg",
         article:[
             {name:"金刚般若波罗蜜经",content:"如是我闻，一时，佛在舍卫国祗树给孤独园，与大比丘众千二百五十人俱。尔时，世尊食时，著衣持钵，入舍卫大城乞食。于其城中，次第乞已，还至本处。饭食讫，收衣钵，洗足已，敷座而坐。"},
