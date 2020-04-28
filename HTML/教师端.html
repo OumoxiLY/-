@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/教师端.css">
+</head>
+<body>
+     <div id="background">
+         <div class="title" >
+             <table>
+                 <tr>
+                     <td></td>
+                     <td @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</td>
+                     <td><a @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</a></td>
+                     <td><a @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</a></td>
+                     <td><a @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</a></td>
+                 </tr>
+             </table>
+         </div>
+         <div class="content" v-show="num==1">
+             <div class="information">
+                 <img>
+                 <div>
+                     <h2>基本信息</h2>
+                     <h4>姓名：王红艳</h4>
+                     <h4>性别：女</h4>
+                     <h4>年龄：18</h4>
+                     <h4>入职时间：</h4>
+                     <h4>研究方向:</h4>
+                 </div>
+             </div>
+             <div class="article">
+                 <div v-for="(item,index) in article" v-if="index<=1">
+                     <h2 v-text="item.name"></h2>
+                     <p v-text="item.content"></p>
+                 </div>
+                  <a style="margin-left:80%;" class="unchecked">更多</a>
+             </div>
+         </div>
+         <div class="content" v-show="num==2">
+             <div v-for="(item,index) in meeting" v-if="index<=3">
+                 <h1 style="text-align: center;" v-text="item.name"></h1>
+                 <p v-text="item.content"></p>
+             </div>
+         </div>
+         <div class="content" v-show="num==3">
+            <div v-for="(item,index) in research" v-if="index<=3">
+                <h1 style="text-align: center;" v-text="item.name"></h1>
+                <p v-text="item.content"></p>
+            </div>
+         </div>
+         <div class="content" v-show="num==4">
+             <table>
+                 <tr>
+                     <th>教授课程</th>
+                     <th>最新课程</th>
+                     <th>最新课程反馈</th>
+                     <th>总课程反馈</th>
+                 </tr>
+                 <tr v-for="(item,index) in course" v-if="index<=2">
+                     <td v-text="item.name"></td>
+                     <td v-text="item.lesson[course[index].lesson.length-1].date"></td>
+                     <td v-text="item.lesson[course[index].lesson.length-1].feedback[course[index].lesson[course[index].lesson.length-1].feedback.length-1]"></td>
+                     <td v-text="item.feedback[course[index].feedback.length-1]"></td>
+                 </tr>
+             </table>
+         </div>
+         </div>
+     </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/教师端.js"></script>
+

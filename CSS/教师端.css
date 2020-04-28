@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+}
+div{
+    border: 1px solid black;
+}
+.background{
+    background-image: url("../img/");
+}
+.title{
+    margin-top: 100px;
+    width: 70%;
+    margin-left:15%;
+}
+.title table{
+    /* border: 1px solid black ; */
+    width: 100%;
+    table-layout: fixed;
+}
+.title table tr td{
+    width: 16%;
+    font-size: x-large;
+    border-left:1px solid gainsboro;
+}
+.unchecked{
+    color: gray;
+}
+.checked{
+    color: black;
+}
+.unchecked:hover{
+    color: black;
+}
+.content{
+    width: 70%;
+    margin-left: 15%;
+}
+.content table{
+    width: 100%;
+}
+.content table th{
+    width: 25%;
+}
+.content table td{
+    text-align: center;
+}
+.information{
+    width: 60%;
+}
+.article{
+    width: 40%;
+}
+.article div{
+    height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 40px;
+}
+.article p{
+   
+    /* word-wrap:break-word;     */
+    /* word-break:break-all;     */
+    /* height: 30px;    */
+}
