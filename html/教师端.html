@@ -13,9 +13,9 @@
                  <tr>
                      <td style="width: 32%;border-left: 0;"><img src="../img/4.png" width="100%"></td>
                      <td @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</td>
-                     <td><a @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</a></td>
-                     <td><a @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</a></td>
-                     <td><a @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</a></td>
+                     <td @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</td>
+                     <td @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</td>
+                     <td @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</td>
                  </tr>
              </table>
          </div>

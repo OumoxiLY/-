@@ -2,6 +2,9 @@
     margin: 0;
     /* padding: 0; */
 }
+body{
+    background: rgb(241, 241, 241);
+}
 div{
     border: px solid black;
 }
@@ -12,6 +15,7 @@ div{
     margin-top: 100px;
     width: 70%;
     margin-left:15%;
+    /* background-color: white; */
 }
 .title table{
     /* border: 1px solid black ; */
@@ -28,15 +32,17 @@ div{
 }
 .checked{
     color: black;
+    /* background-color: white; */
 }
 .unchecked:hover{
     color: black;
 }
 .content{
-    width: 70%;
+    width: 65%;
     margin-left: 15%;
-    margin-top: 50px;
-    padding-left: 50px;
+    padding-top: 50px;
+    padding-left: 5%;
+    background-color: white;
 }
 .content table{
     width: 85%;
