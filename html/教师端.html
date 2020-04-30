@@ -53,14 +53,14 @@
          </div>
          <div class="content" v-show="num==4">
              <table>
-                 <tr>
+                 <tr style="border-bottom: 1px solid black;">
                      <th>教授课程</th>
                      <th>最新课程</th>
                      <th>最新课程反馈</th>
                      <th>总课程反馈</th>
                  </tr>
-                 <tr v-for="(item,index) in course" v-if="index<=2">
-                     <td v-text="item.name"></td>
+                 <tr v-for="(item,index) in course">
+                     <td><a v-text="item.name" href="../html/课程反馈.html"></a></td>
                      <td v-text="item.lesson[course[index].lesson.length-1].date"></td>
                      <td v-text="item.lesson[course[index].lesson.length-1].feedback[course[index].lesson[course[index].lesson.length-1].feedback.length-1]"></td>
                      <td v-text="item.feedback[course[index].feedback.length-1]"></td>

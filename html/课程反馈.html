@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程反馈</title>
+    <link rel="stylesheet" href="../css/课程反馈.css">
+
+</head>
+<body>
+    <!-- 节数 对应课程反馈 总课程反馈 -->
+    <div id="feedBack">
+        <div class="lesson">
+            <h3 v-for="(item,index) in lesson" v-text="item.date" @click="change(index)" :class="{color:num==index}"></h3>
+        </div>
+        <div class="feedBack">
+            <div class="text" v-for="item in lesson[num].feedback" v-text="item" @click="show(item)"></div>
+            <div class="show" v-show="isShow">
+                <button @click="close"><img src="../img/叉.png" width="10px"></button>
+                <p v-text="text"></p>
+            </div>
+        </div>
+        <div class="FeedBack">
+            <p v-for="item in feedback" v-text="item" @click="show(item)"></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/课程反馈.js"></script>

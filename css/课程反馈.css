@@ -1,0 +1,78 @@
+body{
+    background: rgb(241, 241, 241);
+}
+p:hover{
+    color: brown;
+}
+h3:hover{
+    color: brown;
+}
+#feedBack{
+    margin-top: 50px;
+    margin-left: 10%;
+    background-color: white;
+    width: 80%;
+}
+.lesson{
+    display: inline-block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-right-radius: 20px;
+    width: 15%;
+    vertical-align: top;
+    padding-left: 2%;
+}
+.color{
+    color: brown;
+}
+.feedBack{
+    display: inline-block;
+    width: 60%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 50px;
+}
+.text{
+    height: 44px;
+    margin-top: 10px;
+    border-bottom: 1px dotted black;
+    overflow: hidden;
+    text-indent: 25px;
+    text-overflow: ellipsis;
+}
+.text:hover{
+    color: brown;
+}
+.show{
+    position: fixed;
+    width: 50%;
+    height: 200px;
+    top: 25%;
+    left: 25%;
+    border: 1px solid black;
+    background: white;
+    z-index: 99;
+    border-radius: 10px;
+    text-indent: 25px;
+}
+.show p{
+    margin: 5% 5%;
+}
+.show button{
+    border: 0;
+    margin-left: 92%;
+    margin-top: 1%;
+}
+.FeedBack{
+    display: inline-block;
+    vertical-align: bottom;
+    width: 15%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    padding-left: 1%;
+    border-top-left-radius: 20px;
+}
+.FeedBack p{
+    overflow: hidden;
+    height: 44px;
+}
