@@ -1,11 +1,9 @@
 body{
     background: rgb(241, 241, 241);
 }
-p:hover{
-    color: brown;
-}
 h3:hover{
     color: brown;
+    cursor: pointer;
 }
 #feedBack{
     margin-top: 50px;
@@ -39,6 +37,7 @@ h3:hover{
     overflow: hidden;
     text-indent: 25px;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 .text:hover{
     color: brown;
@@ -53,14 +52,14 @@ h3:hover{
     background: white;
     z-index: 99;
     border-radius: 10px;
-    text-indent: 25px;
 }
 .show p{
+    text-indent: 25px;
     margin: 5% 5%;
 }
 .show button{
     border: 0;
-    margin-left: 92%;
+    margin-left: 96%;
     margin-top: 1%;
 }
 .FeedBack{
@@ -75,4 +74,8 @@ h3:hover{
 .FeedBack p{
     overflow: hidden;
     height: 44px;
+    cursor: pointer;
+}
+.FeedBack p:hover{
+    color: brown;
 }
