@@ -24,6 +24,7 @@ var feedBack = new Vue({
     methods:{
         change:function(k){
             this.num = k;
+            this.isShow = false;
         },
         show:function(k){
             this.text = k;

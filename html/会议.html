@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会议</title>
+    <link rel="stylesheet" href="../css/会议.css">
+</head>
+<body>
+    <div id="meeting">
+        <div class="title">
+            <h3 v-text="'会议名称:'+name"></h3>
+            <h3 v-text="'参会人员:'+people"></h3>
+            <h3 v-text="'主办方:'+host"></h3>
+            <h3 v-text="'会议日期:'+date"></h3>
+        </div>
+        <div class="content">
+            <div v-text="content"></div>
+            <div class="show" v-show="isShow">
+                <button @click="close"><img src="../img/叉.png" width="10px"></button>
+                <p v-text="text"></p>
+            </div>
+        </div>
+        <div class="notes">
+            <p v-for="item in notes" v-text="item" @click="show(item)"></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/会议.js"></script>

@@ -3,7 +3,7 @@
     /* padding: 0; */
 }
 a{
-    color: gray;
+    color: slateblue;
     text-decoration: none;
     cursor: pointer;
 }
@@ -50,6 +50,50 @@ div{
     padding-left: 5%;
     background-color: white;
 }
+.information{
+    width: 70%;
+    position: absolute;
+    z-index: 999;
+}
+.information div{
+    width: 30%;
+    display: inline-block;
+}
+.information div h4{
+    margin: 10px;
+}
+.article{
+    width: 40%;
+    display: inline-block;
+}
+.article div{
+    border-bottom: 1px dotted gray;
+    height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 40px;
+}
+.meeting{
+    margin-top: 20px;
+    width: 90%;
+    height: 130px;
+    border-bottom:1px dotted black ;
+}
+.meeting a:hover{
+    color: darkblue;
+}
+.meeting div{
+    display: inline-block;
+}
+.meeting p{
+    height: 60px;
+    overflow: hidden;
+    text-indent: 25px;
+    cursor: pointer;
+}
+.meeting p:hover{
+    color: darkblue;
+}
 .text{
     position: fixed;
     top: 25%;
@@ -57,7 +101,7 @@ div{
     border: 1px solid black;
     border-radius: 10px;
     width: 50%;
-    height: 200px;
+    height: 300px;
     background-color: white;
 }
 .text button{
@@ -85,28 +129,11 @@ div{
     border-bottom: 1px dotted gray;
 }
 .content table td a:hover{
-    color: brown;
+    color: darkblue;
 }
-.information{
-    width: 70%;
-    position: absolute;
-    z-index: 999;
+.content span{
+    cursor: pointer;
 }
-.information div{
-    width: 30%;
-    display: inline-block;
-}
-.information div h4{
-    margin: 10px;
-}
-.article{
-    width: 40%;
-    display: inline-block;
-}
-.article div{
-    border-bottom: 1px dotted gray;
-    height: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 40px;
+.content span:hover{
+    color: darkblue;
 }

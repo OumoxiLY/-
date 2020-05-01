@@ -1,46 +1,30 @@
 body{
     background: rgb(241, 241, 241);
 }
-h3:hover{
-    color: darkblue;
-    cursor: pointer;
-}
-#feedBack{
+#meeting{
     margin-top: 50px;
     margin-left: 10%;
     background-color: white;
     width: 80%;
 }
-.lesson{
+.title{
     display: inline-block;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-bottom-right-radius: 20px;
-    width: 15%;
+    width: 20%;
     vertical-align: top;
     padding-left: 2%;
 }
 .color{
     color: darkblue;
 }
-.feedBack{
+.content{
     display: inline-block;
-    width: 60%;
+    width: 55%;
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 50px;
-}
-.text{
-    height: 44px;
-    margin-top: 10px;
-    border-bottom: 1px dotted black;
-    overflow: hidden;
-    text-indent: 25px;
-    text-overflow: ellipsis;
-    cursor: pointer;
-}
-.text:hover{
-    color: darkblue;
 }
 .show{
     position: fixed;
@@ -62,7 +46,7 @@ h3:hover{
     margin-left: 96%;
     margin-top: 1%;
 }
-.FeedBack{
+.notes{
     display: inline-block;
     vertical-align: bottom;
     width: 15%;
@@ -71,11 +55,11 @@ h3:hover{
     padding-left: 1%;
     border-top-left-radius: 20px;
 }
-.FeedBack p{
+.notes p{
     overflow: hidden;
     height: 44px;
     cursor: pointer;
 }
-.FeedBack p:hover{
+.notes p:hover{
     color: darkblue;
 }

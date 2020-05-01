@@ -8,7 +8,7 @@
 </head>
 <body>
      <div id="background">
-         <div class="title" >
+         <div class="title" @click="close()">
              <table>
                  <tr>
                      <td style="width: 32%;border-left: 0;"><img src="../img/4.png" width="100%"></td>
@@ -40,9 +40,22 @@
              <div style="display: inline-block;width: 50%;position: relative;vertical-align: bottom;"><img src="../img/5.jpg" width="100%"></div>
          </div>
          <div class="content" v-show="num==2">
-             <div v-for="(item,index) in meeting" v-if="index<=3">
-                 <h1 style="text-align: center;" v-text="item.name"></h1>
-                 <p v-text="item.content"></p>
+             <!-- 参会人 日期 会议内容 会议要点 主办单位 -->
+             <div v-for="(item,index) in meeting" v-if="index<=3" class="meeting">
+                 <div style="width: 30%;border-right:1px solid black ;">
+                    <h3>会议名称：<a href="../html/会议.html" target="_blank" v-text="item.name"></a></h3>
+                    <h4 v-text="'参会人员:'+item.people"></h4>
+                    <h4 v-text="'主办方:'+item.host"></h4>
+                    <h4 v-text="'会议日期:'+item.date"></h4>
+                 </div>
+                 <div style="width: 65%;">
+                    <h3 v-text="'会议摘要：'"></h3>
+                    <p v-text="item.content" @click="show(item.content)"></p>
+                 </div>
+             </div>
+             <div v-show="isShow" class="text">
+                 <button @click="close"><img src="../img/叉.png" width="10px"></button>
+                 <p v-text="text"></p>
              </div>
          </div>
          <div class="content" v-show="num==3">
@@ -63,15 +76,15 @@
                      <td><a v-text="item.name" href="../html/课程反馈.html" target="_blank"></a></td>
                      <td v-text="item.lesson[course[index].lesson.length-1].date"></td>
                      <td @click="show(item.lesson[course[index].lesson.length-1].feedback[course[index].lesson[course[index].lesson.length-1].feedback.length-1])">
-                         <a v-text="item.lesson[course[index].lesson.length-1].feedback[course[index].lesson[course[index].lesson.length-1].feedback.length-1]"></a>
+                         <span v-text="item.lesson[course[index].lesson.length-1].feedback[course[index].lesson[course[index].lesson.length-1].feedback.length-1]"></span>
                      </td>
                      <td v-text="item.feedback[course[index].feedback.length-1]"></td>
                  </tr>
-                 <div v-show="isShow" class="text">
-                     <button @click="close"><img src="../img/叉.png" width="10px"></button>
-                     <p v-text="text"></p>
-                 </div>
              </table>
+             <div v-show="isShow" class="text">
+                 <button @click="close"><img src="../img/叉.png" width="10px"></button>
+                 <p v-text="text"></p>
+             </div>
          </div>
          <div style="height: 200px;"></div>
      </div>
