@@ -8,17 +8,24 @@
 </head>
 <body>
      <div id="background">
+
+
          <div class="title" @click="close()">
-             <table>
-                 <tr>
-                     <td style="width: 32%;border-left: 0;"><img src="../img/4.png" width="100%"></td>
-                     <td @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</td>
-                     <td @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</td>
-                     <td @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</td>
-                     <td @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</td>
-                 </tr>
-             </table>
-         </div>
+             <div><a href="../html/index.html"><img src="../img/4-5.png" width="160px"></a></div>
+             <div>
+                <li @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</li>
+                <li @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</li>
+                <li @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</li>
+                <li @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</li>
+             </div>
+             <div class="avatar"><img src="../img/1.jpg" width="36px"></div>
+             <div>
+                 <li><a href="">通知</a></li>
+                 <li><a href="">信箱</a></li>
+             </div>      
+         </div>    
+
+
          <div class="content" v-show="num==1">
              <div class="information">
                  <div style="border: 5px double skyblue;border-radius: 50%;overflow: hidden;"><img src="../img/1.jpg" width="100%"></div>
@@ -39,6 +46,9 @@
              </div>
              <div style="display: inline-block;width: 50%;position: relative;vertical-align: bottom;"><img src="../img/5.jpg" width="100%"></div>
          </div>
+
+
+
          <div class="content" v-show="num==2">
              <!-- 参会人 日期 会议内容 会议要点 主办单位 -->
              <div v-for="(item,index) in meeting" v-if="index<=3" class="meeting">
@@ -58,12 +68,16 @@
                  <p v-text="text"></p>
              </div>
          </div>
+
+
          <div class="content" v-show="num==3">
             <div v-for="(item,index) in research" v-if="index<=3">
                 <h1 style="text-align: center;" v-text="item.name"></h1>
                 <p v-text="item.content"></p>
             </div>
          </div>
+
+
          <div class="content" v-show="num==4">
              <table>
                  <tr style="border-bottom: 1px solid black;">

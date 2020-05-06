@@ -8,7 +8,7 @@ a{
     cursor: pointer;
 }
 body{
-    background: rgb(241, 241, 241);
+    background: skyblue;
 }
 div{
     border: px solid black;
@@ -17,21 +17,35 @@ div{
     background-image: url("../img/");
 }
 .title{
-    margin-top: 100px;
-    width: 70%;
-    margin-left:15%;
+    border-radius: 0;
+    height: 36px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    font-size: large;
     /* background-color: white; */
 }
-.title table{
-    /* border: 1px solid black ; */
-    width: 100%;
-    table-layout: fixed;
+.title div{
+    height: 36px;
 }
-.title table tr td{
-    width: 16%;
-    font-size: x-large;
-    border-left:1px solid gainsboro;
+.title li{
+    list-style: none;
+    display: inline-block;
+    line-height: 36px;
+    margin-left: 10px;
     cursor: pointer;
+}
+.title a{
+    color: black;
+}
+.avatar{
+    width: 36px;
+    height: 36px;
+    border: 2px solid #44a9f9;
+    border-radius:50% ;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-right: 10px;
 }
 .unchecked{
     color: gray;
@@ -46,9 +60,12 @@ div{
 .content{
     width: 65%;
     margin-left: 15%;
-    padding-top: 50px;
+    margin-top: 8px;
+    padding-top: 10px;
     padding-left: 5%;
-    background-color: white;
+    padding-bottom:20px ;
+    background-color: #fff;
+    border-radius:5px ;
 }
 .information{
     width: 70%;

@@ -8,11 +8,22 @@
 </head>
 <body>
     <div id="index">
-        <table class="title" style="width: 100%;">
-            <tr>
-                <td><img src="../img/4-2.png" width="250px"></td>
-            </tr>
-        </table>
+        <!-- 教师信息 专业介绍 校友信息 系内活动 -->
+        <div style="width:10%;"><img src="../img/4-4.png" width="200px"></div>
+        <div style="width: 50%;">
+            <table class="title">
+                <tr>
+                  <td><a v-text="'专业介绍'"></a></td>      
+                  <td><a v-text="'教师信息'"></a></td>             
+                  <td><a v-text="'校友信息'"></a></td>             
+                  <td><a v-text="'系内活动'"></a></td>             
+                </tr>       
+           </table>
+        </div>
+        <div>
+            <div class="avatar"><a href="../html/教师端.html"><img src="../img/1.jpg" width="50px"></a></div>
+            <a style="font-size: large;">{{ id }}</a>
+        </div>
     </div>
 </body>
 </html>

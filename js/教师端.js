@@ -1,7 +1,8 @@
 var title = new Vue({
     el:"#background",
     data:{
-        num:"2",
+        num:"1",
+        id:"Jinx",
         avatarSrc:"img\1.jpg",
         text:"",
         isShow:false,

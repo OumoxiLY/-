@@ -1,34 +1,73 @@
+*{
+    margin: 0;
+}
 body{
-    background: rgb(241, 241, 241);
+    background: skyblue;
+}
+a{
+    text-decoration: none;
 }
 h3:hover{
-    color: darkblue;
+    color: #44a9f9;
     cursor: pointer;
 }
-#feedBack{
-    margin-top: 50px;
-    margin-left: 10%;
+.title0{
+    border-radius: 0;
+    height: 36px;
+    padding: 10px;
     background-color: white;
-    width: 80%;
+    display: flex;
+    font-size: large;
+    /* background-color: white; */
+}
+.title0 div{
+    height: 36px;
+}
+.title0 li{
+    list-style: none;
+    display: inline-block;
+    line-height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.title0 a{
+    color: black;
+}
+.avatar{
+    width: 36px;
+    height: 36px;
+    border: 2px solid #44a9f9;
+    border-radius:50% ;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-right: 10px;
 }
 .lesson{
+    padding:10px;
+    margin-top: 8px;
+    margin-left: 10%;
     display: inline-block;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-bottom-right-radius: 20px;
-    width: 15%;
+    width: 16%;
     vertical-align: top;
-    padding-left: 2%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: large;
+}
+.lesson p{
+    cursor: pointer;
 }
 .color{
-    color: darkblue;
+    color: #44a9f9;
 }
 .feedBack{
+    margin-top: 8px;
+    margin-left: 5px;
+    background-color: white;
+    width: 45%;
+    border-radius:5px ;
+    padding:10px;
     display: inline-block;
-    width: 60%;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 50px;
+    text-indent: 25px;
 }
 .text{
     height: 44px;
@@ -40,7 +79,7 @@ h3:hover{
     cursor: pointer;
 }
 .text:hover{
-    color: darkblue;
+    color: #44a9f9;
 }
 .show{
     position: fixed;
@@ -59,17 +98,18 @@ h3:hover{
 }
 .show button{
     border: 0;
-    margin-left: 96%;
+    margin-left: 93%;
     margin-top: 1%;
 }
 .FeedBack{
+    padding: 10px;
+    margin-top: 8px;
+    margin-left: 5px;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
     width: 15%;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    padding-left: 1%;
-    border-top-left-radius: 20px;
+    background-color: white;
+    border-radius: 5px;
 }
 .FeedBack p{
     overflow: hidden;
@@ -77,5 +117,5 @@ h3:hover{
     cursor: pointer;
 }
 .FeedBack p:hover{
-    color: darkblue;
+    color: #44a9f9;
 }
