@@ -8,7 +8,10 @@ a{
     cursor: pointer;
 }
 body{
-    background: skyblue;
+    background: url(../img/10.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 div{
     border: px solid black;
@@ -82,6 +85,7 @@ div{
 .article{
     width: 40%;
     display: inline-block;
+    margin-top: 350px;
 }
 .article div{
     border-bottom: 1px dotted gray;

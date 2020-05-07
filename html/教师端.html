@@ -9,45 +9,60 @@
 <body>
      <div id="background">
 
-
          <div class="title" @click="close()">
              <div><a href="../html/index.html"><img src="../img/4-5.png" width="160px"></a></div>
+
              <div>
                 <li @click="checked(1)" :class="{checked:num==1}" class="unchecked">教师信息</li>
                 <li @click="checked(2)" :class="{checked:num==2}" class="unchecked">会议</li>
                 <li @click="checked(3)" :class="{checked:num==3}" class="unchecked">科研成果</li>
                 <li @click="checked(4)" :class="{checked:num==4}" class="unchecked">教授课程</li>
              </div>
+
              <div class="avatar"><img src="../img/1.jpg" width="36px"></div>
+
              <div>
                  <li><a href="../html/通知.html">通知</a></li>
                  <li><a href="../html/通知.html">信箱</a></li>
              </div>      
          </div>    
 
-
          <div class="content" v-show="num==1">
              <div class="information">
                  <div style="border: 5px double skyblue;border-radius: 50%;overflow: hidden;"><img src="../img/1.jpg" width="100%"></div>
+
                  <div>
-                     <h4>姓名：Jinx</h4>
-                     <h4>性别：女</h4>
-                     <h4>年龄：17</h4>
-                     <h4>入职时间:2020年1月1日</h4>
-                     <h4>研究方向:</h4>
+                     <h4>姓名：<b v-text="personIn.id" v-if="key==0"></b>
+                        <input type="text" v-model="personIn.id" v-if="key==1"></h4>
+
+                     <h4>性别：<b v-text="personIn.sex" v-if="key==0"></b>
+                        <input type="text" v-model="personIn.sex" v-if="key==1"></h4>
+
+                     <h4>年龄：<b v-text="personIn.age" v-if="key==0"></b>
+                        <input type="text" v-model="personIn.age" v-if="key==1"></h4>
+
+                     <h4>入职时间:<b v-text="personIn.date" v-if="key==0"></b>
+                        <input type="text" v-model="personIn.date" v-if="key==1"></h4>
+
+                     <h4>研究方向:<b v-text="personIn.research" v-if="key==0"></b>
+                        <input type="text" v-model="personIn.research" v-if="key==1"></h4>
+                     
+                     <button @click="change(1)" v-if="key==0">修改个人资料</button>
+                     <button @click="change(0)" v-if="key==1">确认修改</button>
                  </div>
              </div>
+
              <div class="article">
                  <div v-for="(item,index) in article" v-if="index<=1">
                      <h2 v-text="item.name"></h2>
                      <p style="text-indent: 25px;margin-top: 10px;" v-text="item.content"></p>
                  </div>
-                  <a style="margin-left:80%;font-size: large;" class="unchecked" href="文章.html" target="_blank">更  多</a>
+
+                 <a style="margin-left:80%;font-size: large;" class="unchecked" href="文章.html" target="_blank">更  多</a>
              </div>
+
              <div style="display: inline-block;width: 50%;position: relative;vertical-align: bottom;"><img src="../img/5.jpg" width="100%"></div>
          </div>
-
-
 
          <div class="content" v-show="num==2">
              <!-- 参会人 日期 会议内容 会议要点 主办单位 -->
@@ -58,17 +73,18 @@
                     <h4 v-text="'主办方:'+item.host"></h4>
                     <h4 v-text="'会议日期:'+item.date"></h4>
                  </div>
+
                  <div style="width: 65%;">
                     <h3 v-text="'会议摘要：'"></h3>
                     <p v-text="item.content" @click="show(item.content)"></p>
                  </div>
              </div>
+
              <div v-show="isShow" class="text">
                  <button @click="close"><img src="../img/叉.png" width="10px"></button>
                  <p v-text="text"></p>
              </div>
          </div>
-
 
          <div class="content" v-show="num==3">
             <div v-for="(item,index) in research" v-if="index<=3">
@@ -76,7 +92,6 @@
                 <p v-text="item.content"></p>
             </div>
          </div>
-
 
          <div class="content" v-show="num==4">
              <table>
@@ -95,11 +110,13 @@
                      <td v-text="item.feedback[course[index].feedback.length-1]"></td>
                  </tr>
              </table>
+
              <div v-show="isShow" class="text">
                  <button @click="close"><img src="../img/叉.png" width="10px"></button>
                  <p v-text="text"></p>
              </div>
          </div>
+
          <div style="height: 200px;"></div>
      </div>
 </body>
