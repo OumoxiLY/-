@@ -1,6 +1,11 @@
 *{
     margin: 0;
 }
+a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
 body{
     background: url(../img/8-1.jpg) center;
     background-size: cover;
@@ -39,9 +44,4 @@ body{
     display: inline-block;
     list-style: none;
     margin-left: 10px;
-}
-.notice a{
-    color: white;
-    text-decoration: none;
-    font-size: large;
 }

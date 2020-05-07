@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+}
+body{
+    background: skyblue;
+}
+div{
+    /* border: 1px solid black; */
+}
+a{
+    text-decoration: none;
+}
+.title0{
+    border-radius: 0;
+    height: 36px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    font-size: large;
+    /* background-color: white; */
+}
+.title0 div{
+    height: 36px;
+}
+.title0 li{
+    list-style: none;
+    display: inline-block;
+    line-height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.title0 a{
+    color: black;
+}
+.avatar{
+    width: 36px;
+    height: 36px;
+    border: 2px solid #44a9f9;
+    border-radius:50% ;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-right: 10px;
+}
+.list{
+    display: inline-block;
+    width: 8%;
+    vertical-align: top;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-left: 7%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: gray;
+}
+.list li{
+    cursor: pointer;
+}
+.color{
+    color: #44a9f9;
+}
+.content{
+    width: 65%;
+    margin-left: ;
+    margin-top: 8px;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-bottom:20px ;
+    background-color: #fff;
+    border-radius:5px ;
+    display: inline-block;
+}
+.information{
+    width: 70%;
+    position: absolute;
+    z-index: 999;
+}
+.information div{
+    width: 30%;
+    display: inline-block;
+}
+.information div h4{
+    margin: 10px;
+}
+.article{
+    width: 40%;
+    display: inline-block;
+    margin-top: 350px;
+}
+.article div{
+    border-bottom: 1px dotted gray;
+    height: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 40px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教师信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/教师信息.css">
+</head>
+<body>
+    <div id="teacherIn">
+
+        <div class="title0" @click="close()">
+            <div><a href="../html/index.html"><img src="../img/4-5.png" width="160px"></a></div>
+            
+            <div>
+               <li>专业介绍</li>
+               <li><a href="./教师信息.html">教师信息</a></li>
+               <li>校友信息</li>
+               <li>系内活动</li>
+            </div>
+            
+            <div class="avatar"><a href="../html/教师个人中心.html"><img src="../img/1.jpg" width="36px"></a></div>
+            
+            <div>
+                <li><a href="../html/通知.html">通知</a></li>
+                <li><a href="../html/通知.html">信箱</a></li>
+            </div>      
+        </div>    
+
+        <div class="list">
+            <li v-for="(item,index) in personIn" v-text="item.id" @click="change(index)" :class="{color:num==index}"></li>
+        </div>
+
+        <div class="content">
+            <div class="information">
+                <div style="border: 5px double skyblue;border-radius: 50%;overflow: hidden;">
+                    <img src="../img/1.jpg" width="100%">
+                </div>
+
+                <div>
+                    <h4 v-text="'姓名:'+personIn[num].id"></h4>
+                    <h4 v-text="'性别:'+personIn[num].sex"></h4>
+                    <h4 v-text="'年龄:'+personIn[num].age"></h4>
+                    <h4 v-text="'入职时间:'+personIn[num].date"></h4>
+                    <h4 v-text="'研究方向:'+personIn[num].research"></h4>
+                </div>
+            </div>
+
+            <div class="article">
+                <div v-for="(item,index) in article" v-if="index<=1">
+                    <h2 v-text="item.name"></h2>
+                    <p style="text-indent: 25px;margin-top: 10px;" v-text="item.content"></p>
+                </div>
+
+                <a style="margin-left:80%;font-size: large;" class="unchecked" href="文章.html" target="_blank">更  多</a>
+            </div>
+
+            <div style="display: inline-block;width: 50%;position: relative;vertical-align: bottom;"><img src="../img/5.jpg" width="100%"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/教师信息.js"></script>
