@@ -11,10 +11,9 @@ body{
 #index{
     width: 100%;
 }
-#index div{
+.top div{
     display: inline-block;
     margin-top: 20px;
-    margin-left: 80px;
 }
 .title{
     /* background-color: #44A9F9; */
@@ -32,4 +31,17 @@ body{
     border: 2px solid white;
     border-radius:50% ;
     overflow: hidden;
+}
+.notice{
+    margin-left: 30px;
+}
+.notice li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+}
+.notice a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
 }

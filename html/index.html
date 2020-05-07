@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>电子商务</title>
     <link rel="stylesheet" type="text/css" href="../css/index.css">
 </head>
+
 <body>
     <div id="index">
-        <!-- 教师信息 专业介绍 校友信息 系内活动 -->
-        <div style="width:10%;"><img src="../img/4-4.png" width="200px"></div>
-        <div style="width: 50%;">
-            <table class="title">
-                <tr>
-                  <td><a v-text="'专业介绍'"></a></td>      
-                  <td><a v-text="'教师信息'"></a></td>             
-                  <td><a v-text="'校友信息'"></a></td>             
-                  <td><a v-text="'系内活动'"></a></td>             
-                </tr>       
-           </table>
-        </div>
-        <div>
-            <div class="avatar"><a href="../html/教师端.html"><img src="../img/1.jpg" width="50px"></a></div>
-            <a style="font-size: large;">{{ id }}</a>
+        <div class="top">
+            <!-- 教师信息 专业介绍 校友信息 系内活动 -->
+            <div style="width:10%;margin-left: 80px;"><img src="../img/4-4.png" width="200px"></div>
+
+            <div style="width: 50%;margin-left: 80px;">
+                <table class="title">
+                    <tr>
+                        <td><a v-text="'专业介绍'"></a></td>
+                        <td><a v-text="'教师信息'"></a></td>
+                        <td><a v-text="'校友信息'"></a></td>
+                        <td><a v-text="'系内活动'"></a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <div class="avatar"><a href="../html/教师端.html"><img src="../img/1.jpg" width="50px"></a></div>
+                <a style="font-size: large;" v-text="id"></a>
+            </div>
+
+            <div class="notice">
+                <li><a href="../html/通知.html">通知</a></li>
+                <li><a href="../html/通知.html">信箱</a></li>
+            </div>
+
         </div>
     </div>
 </body>
+
 </html>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

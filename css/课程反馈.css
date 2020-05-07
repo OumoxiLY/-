@@ -7,10 +7,6 @@ body{
 a{
     text-decoration: none;
 }
-h3:hover{
-    color: #44a9f9;
-    cursor: pointer;
-}
 .title0{
     border-radius: 0;
     height: 36px;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/通知.css">
+</head>
+<body>
+    <div id="notice">
+
+        <div class="title0" @click="close()">
+            <div><a href="../html/index.html"><img src="../img/4-5.png" width="160px"></a></div>
+    
+            <div>
+               <li>专业介绍</li>
+               <li>教师信息</li>
+               <li>校友信息</li>
+               <li>系内活动</li>
+            </div>
+    
+            <div class="avatar"><a href="../html/教师端.html"><img src="../img/1.jpg" width="36px"></a></div>
+    
+            <div>
+                <li><a href="../html/通知.html">通知</a></li>
+                <li><a href="../html/通知.html">信箱</a></li>
+            </div>      
+        </div>
+    
+        <div class="box">
+            <div class="box1">
+                <li @click="checked(1)" :class="{color:num==1}" class="color0">通知</li>
+                <li @click="checked(2)" :class="{color:num==2}" class="color0">信箱</li>
+            </div>
+    
+            <div class="box2" v-if="num==1">
+                <div v-for="(item,index) in notices">
+                    <li><h4 v-text="item.name"></h4></li>
+                    <li><h5 v-text="item.date" style="color: gray;"></h5></li>
+                    <p v-text="item.content"></p>
+                </div>
+            </div>
+
+            <div class="box2" v-if="num==2">
+                <div v-for="(item,index) in messages">
+                    <li><h4 v-text="item.name"></h4></li>
+                    <li><h5 v-text="item.date" style="color: gray;"></h5></li>
+                    <p v-text="item.content"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="../js/通知.js"></script>

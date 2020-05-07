@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(../img/7.png) center;
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div{
+    /* border: 1px solid black; */
+}
+a{
+    text-decoration: none;
+}
+.title0{
+    border-radius: 0;
+    height: 36px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    font-size: large;
+    /* background-color: white; */
+}
+.title0 div{
+    height: 36px;
+}
+.title0 li{
+    list-style: none;
+    display: inline-block;
+    line-height: 36px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.title0 a{
+    color: black;
+}
+.avatar{
+    width: 36px;
+    height: 36px;
+    border: 2px solid #44a9f9;
+    border-radius:50% ;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-right: 10px;
+}
+.box{
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    position: fixed;
+}
+.box1{
+    background-color:rgba(255, 255, 255, 0.8) ;
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.color0{
+    margin-left: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: gray;
+}
+.color{
+    color: #44a9f9;
+}
+.box2{
+    background-color:rgba(255, 255, 255, 0.4) ;
+    width: 89%;
+    height: 93%;
+    display: inline-block;
+    overflow: auto;
+}
+.box2::-webkit-scrollbar {
+    width: 7px;
+    height: 1px;
+}
+.box2::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background:#c5c5c5;
+}
+.box2 div{
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.box2 li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+.box2 p{
+    margin-top: 10px;
+    text-indent: 25px;
+}
